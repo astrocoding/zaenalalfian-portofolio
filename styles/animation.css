@@ -1,0 +1,33 @@
+/* Simple Reveal Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(15px); /* Reduced distance to prevent large visual jumps during smooth scroll */
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    /* Removed will-change to prevent GPU texture memory exhaustion on large sections */
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add slight delays for child elements if needed */
+.hero-text {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.hero-stats {
+    opacity: 0;
+    animation: fadeUp 1s ease-out 0.3s forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

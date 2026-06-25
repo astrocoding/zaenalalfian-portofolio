@@ -1,0 +1,180 @@
+/* Font Definitions */
+@font-face {
+    font-family: 'FuturaExtraBold';
+    src: url('../assets/fonts/futura-pt/FuturaCyrillicExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  /* Core Colors */
+  --brand-light: #0d6efd;
+  --brand-dark: #3b82f6;
+
+  /* Light Theme Tokens */
+  --bg-color-light: #f8f9fa;
+  --hero-bg-light: linear-gradient(to bottom, transparent 80%, #f8f9fa 100%),
+                   radial-gradient(circle at 20% 0%, rgba(13, 110, 253, 0.15) 0%, transparent 40%),
+                   radial-gradient(circle at 90% 80%, rgba(13, 202, 240, 0.15) 0%, transparent 40%),
+                   radial-gradient(circle at 80% 20%, rgba(111, 66, 193, 0.1) 0%, transparent 30%),
+                   #f8f9fa;
+  --text-color-light: #212529;
+  --text-muted-light: #6c757d;
+  --card-bg-light: #ffffff;
+  --nav-bg-light: rgba(248, 249, 250, 0.85);
+  --border-color-light: #dee2e6;
+  --glass-shadow-light: 0 8px 32px rgba(0, 0, 0, 0.05);
+  --glass-border-light: rgba(0, 0, 0, 0.05);
+  --card-glass-bg-light: rgba(255, 255, 255, 0.85);
+  --inner-glass-bg-light: rgba(255, 255, 255, 0.9);
+  --section-alt-bg-light: #eef2f6;
+
+  /* Dark Theme Tokens */
+  --bg-color-dark: #121212;
+  --hero-bg-dark: linear-gradient(to bottom, transparent 60%, #121212 100%),
+                  radial-gradient(circle at top left, #0f172a 0%, #121212 50%, #082f49 100%);
+  --text-color-dark: #f8f9fa;
+  --text-muted-dark: #adb5bd;
+  --card-bg-dark: #1e1e1e;
+  --nav-bg-dark: rgba(18, 18, 18, 0.85);
+  --border-color-dark: #333;
+  --glass-shadow-dark: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --glass-border-dark: rgba(255, 255, 255, 0.1);
+  --card-glass-bg-dark: rgba(255, 255, 255, 0.05);
+  --inner-glass-bg-dark: rgba(255, 255, 255, 0.02);
+  --section-alt-bg-dark: #0a0a0a;
+
+  /* Defaults (Light) */
+  --bg-color: var(--bg-color-light);
+  --hero-bg: var(--hero-bg-light);
+  --text-color: var(--text-color-light);
+  --text-muted: var(--text-muted-light);
+  --primary-color: var(--brand-light);
+  --card-bg: var(--card-bg-light);
+  --nav-bg: var(--nav-bg-light);
+  --border-color: var(--border-color-light);
+  --glass-shadow: var(--glass-shadow-light);
+  --glass-border: var(--glass-border-light);
+  --card-glass-bg: var(--card-glass-bg-light);
+  --inner-glass-bg: var(--inner-glass-bg-light);
+  --section-alt-bg: var(--section-alt-bg-light);
+
+  color-scheme: light dark;
+
+  /* Typography */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-color: var(--bg-color-dark);
+    --hero-bg: var(--hero-bg-dark);
+    --text-color: var(--text-color-dark);
+    --text-muted: var(--text-muted-dark);
+    --primary-color: var(--brand-dark);
+    --card-bg: var(--card-bg-dark);
+    --nav-bg: var(--nav-bg-dark);
+    --border-color: var(--border-color-dark);
+    --glass-shadow: var(--glass-shadow-dark);
+    --glass-border: var(--glass-border-dark);
+    --card-glass-bg: var(--card-glass-bg-dark);
+    --inner-glass-bg: var(--inner-glass-bg-dark);
+    --section-alt-bg: var(--section-alt-bg-dark);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg-color: var(--bg-color-dark);
+  --hero-bg: var(--hero-bg-dark);
+  --text-color: var(--text-color-dark);
+  --text-muted: var(--text-muted-dark);
+  --primary-color: var(--brand-dark);
+  --card-bg: var(--card-bg-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --border-color: var(--border-color-dark);
+  --glass-shadow: var(--glass-shadow-dark);
+  --glass-border: var(--glass-border-dark);
+  --card-glass-bg: var(--card-glass-bg-dark);
+  --inner-glass-bg: var(--inner-glass-bg-dark);
+  --section-alt-bg: var(--section-alt-bg-dark);
+}
+
+:root[data-theme="light"] {
+  --bg-color: var(--bg-color-light);
+  --hero-bg: var(--hero-bg-light);
+  --text-color: var(--text-color-light);
+  --text-muted: var(--text-muted-light);
+  --primary-color: var(--brand-light);
+  --card-bg: var(--card-bg-light);
+  --nav-bg: var(--nav-bg-light);
+  --border-color: var(--border-color-light);
+  --glass-shadow: var(--glass-shadow-light);
+  --glass-border: var(--glass-border-light);
+  --card-glass-bg: var(--card-glass-bg-light);
+  --inner-glass-bg: var(--inner-glass-bg-light);
+  --section-alt-bg: var(--section-alt-bg-light);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  filter: brightness(1.2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
